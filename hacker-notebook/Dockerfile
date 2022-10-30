@@ -46,7 +46,7 @@ RUN pip install pyopenssl==19.0.0 service_identity==18.1.0 Twisted==18.9.0 && \
     python setup.py install && \
     rm -rf /tmp/sslstrip && \
     fix-permissions $CONDA_DIR
-
+RUN pip install Scrapy
 #copy the primary notebook
 COPY --chown=1000:100 Hacker.ipynb $HOME/
 
